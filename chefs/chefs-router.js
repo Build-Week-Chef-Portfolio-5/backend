@@ -13,7 +13,7 @@ router.post('/register', validateRegister, (req, res) => {
     let chefData = req.body;
     const hash = bcrypt.hashSync(chefData.password, 8);
     chefData.password = hash;
-
+    console.log(chefData);
     Chefs.add(chefData)
     .then(user => {
         res.status(201).json(user);
@@ -36,7 +36,7 @@ router.post('/login', validateLogin, (req, res) => {
                 token 
             });
         } else {
-            res.status(401).json({ message: 'You Shall Not Pass!' });
+            res.status(401).json({ message: 'Failed to login' });
         }
     })
     .catch(error => {
