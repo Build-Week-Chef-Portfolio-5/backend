@@ -33,7 +33,8 @@ router.post('/login', validateLogin, (req, res) => {
             const token = signToken(user);  
             res.status(200).json({ 
                 message: `${user.username} Logged In!`, 
-                token 
+                token,
+                id: user.id
             });
         } else {
             res.status(401).json({ message: 'Failed to login' });
