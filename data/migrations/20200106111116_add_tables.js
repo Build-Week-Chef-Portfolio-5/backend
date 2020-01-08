@@ -39,3 +39,4 @@ exports.up = function(knex) {
     .dropTableIfExists('chefs')
     .dropTableIfExists('posts')
   };
+  
