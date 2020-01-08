@@ -27,11 +27,11 @@ https://chefposts.herokuapp.com
 | Name | Type | Required | Unique | Notes |
 | ---- | ---- | -------- | ------ | ----- |
 | id | integer | yes | yes | Chef's id |
-| name | string | no | no | Chef's full name |
+| name | string | yes | no | Chef's full name |
 | username | string | yes | yes | Chef's username (max 50 char) |
 | password | string | yes | yes | Chef's password (max 100 char) |
-| location | string | no | no | Chef's city/town/address |
-| contact_info | string | no | no | Chef's email |
+| location | string | yes | no | Chef's city/town/address |
+| contact_info | string | yes | no | Chef's email |
 
 
 # Posts
